@@ -7,7 +7,7 @@ eye_cascade = cv2.CascadeClassifier('data/haarcascade_eye.xml')
 smile_cascade = cv2.CascadeClassifier('data/haarcascade_smile.xml')
 
 #read the image for furthur editing
-image = cv2.imread('input/face-tmp.jpg')
+image = cv2.imread('photos/face-tmp.jpg')
 
 #convert the RBG image to gray scale image
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

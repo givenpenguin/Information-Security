@@ -46,8 +46,7 @@ def detect_faces(image_test, faces, threshold=0.6):
         distances = []
         for face in faces:
             distance = face_recognition.face_distance([vec_test], face.feature_vector)
-        
-        distances.append(distance)
+            distances.append(distance)
 
         if np.min(distances) > threshold:
             pred_name = 'unknown'
@@ -90,15 +89,16 @@ def draw_name(image_test, loc_test, pred_name):
     cv2.putText(image_test, pred_name, (left, top), font_style, font_scale, font_color, font_thickness)
     return image_test
 
+
+filenames = [
+    'photos/jobs.jpg',
+    'photos/gates.jpg',
+    'photos/trump.jpg',
+    'photos/obamna.jpg',
+]
+
 images = [load_image(filename) for filename in filenames]
-show_image(images[0])
-show_image(images[1])
-show_image(images[2])
-show_image(images[3])
-show_image(images[4])
-show_image(images[5])
 
-faces = create_database(filenames, )
-show_image(faces[0].cropped_face)
+faces = create_database(filenames, images)
 
-show_image(detect_faces(load_image('test.jpg'), faces))
+show_image(detect_faces(load_image('photos/trump.jpg'), faces))
