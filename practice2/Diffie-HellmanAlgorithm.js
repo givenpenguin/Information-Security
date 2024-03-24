@@ -2,7 +2,6 @@
 const primeNum = 83;
 const genOfP = 13;
 is_prime(primeNum);
-const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.-!?".split("");
 
 let privateKeyAlice = random_key(0, 100);
 let privateKeyBob =  random_key(0, 100);
@@ -16,6 +15,8 @@ const sharedSecret = is_shared_secret(sharedSecretAlice, sharedSecretBob);
 
 
 // Caesar Encryption
+const alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя ,.-!?".split("");
+
 const button = document.querySelector(".button");
 const encryptMessage = document.querySelector(".encrypt");
 const decryptMessage = document.querySelector(".decrypt");

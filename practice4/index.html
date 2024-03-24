@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стеганография</title>
+</head>
+<body>
+    <div class="wrapper">
+        <span>Изображение для шифрования: </span>
+        <input type='file' id='file' /><br><br>
+        <span>Предпросмотр: </span>
+        <canvas id='canvas' style='width:300px;'></canvas><br><br>
+
+        <span>Сообщение: </span>
+        <textarea id='message'></textarea><br><br>
+        
+        <button id='encode' class='submit'>Зашифровать</button><br><br>
+        <span>Зашифрованное изображение: </span>
+        <img id='image_encoded' style='width:300px;'><br><br>
+        
+        <button id='decode'>Расшифровать</button><br><br>
+        <span>Расшифрованное сообщение: </span>
+        <span id='message_decoded'></span><br><br>
+    </div>
+    <script src="/practice4/steganography.js"></script>
+</body>
+</html>
